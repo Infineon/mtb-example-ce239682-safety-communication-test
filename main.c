@@ -43,9 +43,9 @@
 
 #include "cy_pdl.h"
 #include "cybsp.h"
+#include "cy_retarget_io.h"
 #include "SelfTest.h"
-#include "stdio_user.h"
-#include <stdio.h>
+
 
 /*******************************************************************************
 * Macros
@@ -99,25 +99,25 @@ int main(void)
     uint8_t txd[] = "1234567890ABCDEF";
     uint16_t count = 0u;
     uint8_t slave_resp_res;
+    cy_rslt_t result;
 
     /* Initialize the device and board peripherals */
     init_cycfg_all();
 
     Cy_SysLib_Delay(CONFIG_ALL_DELAY);
 
-    /* Initialize the UART */
-    initstatus = Cy_SCB_UART_Init(CYBSP_UART_HW, &CYBSP_UART_config, &CYBSP_UART_context);
-
-    /* Initialization failed. Handle error */
-    if(initstatus!=CY_SCB_UART_SUCCESS)
-    {
-        CY_ASSERT(0u);
-    }
-
-    Cy_SCB_UART_Enable(CYBSP_UART_HW);
-
     /* Enable global interrupts */
     __enable_irq();
+
+    /* Initialize retarget-io to use the debug UART port */
+    result = cy_retarget_io_init_fc(CYBSP_DEBUG_UART_TX, CYBSP_DEBUG_UART_RX,
+            CYBSP_DEBUG_UART_CTS,CYBSP_DEBUG_UART_RTS,CY_RETARGET_IO_BAUDRATE);
+
+    /* retarget-io init failed. Stop program execution */
+    if (result != CY_RSLT_SUCCESS)
+    {
+        CY_ASSERT(0);
+    }
 
     /* Init HW for UART Protocol test and Setup ISRs*/
     Timeout_Counter_Init();

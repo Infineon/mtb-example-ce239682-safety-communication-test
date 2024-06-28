@@ -4,13 +4,13 @@ This code example demonstrates the use of the Class-B Safety Test Library to tes
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-ce239682-safety-communication-test)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzk2ODIiLCJTcGVjIE51bWJlciI6IjAwMi0zOTY4MiIsIkRvYyBUaXRsZSI6IkNsYXNzLUIgU2FmZXR5IFRlc3Q6IENvbW11bmljYXRpb24gcHJvdG9jb2wiLCJyaWQiOiJzZGFrIiwiRG9jIHZlcnNpb24iOiIxLjAuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzk2ODIiLCJTcGVjIE51bWJlciI6IjAwMi0zOTY4MiIsIkRvYyBUaXRsZSI6IkNsYXNzLUIgU2FmZXR5IFRlc3Q6IENvbW11bmljYXRpb24gcHJvdG9jb2wiLCJyaWQiOiJzZGFrIiwiRG9jIHZlcnNpb24iOiIxLjEuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.1 or later (tested with v3.1)
-- Board support package (BSP) minimum required version: 3.0.0
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.2 or later (tested with v3.2)
+- Board support package (BSP) minimum required version: v4.2.0
 - Programming language: C
 - Associated parts: [PSoC&trade; 6 MCU](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-6-32-bit-arm-cortex-m4-mcu), [XMC7000 MCU](https://www.infineon.com/cms/en/product/microcontroller/32-bit-industrial-microcontroller-based-on-arm-cortex-m)
 
@@ -23,11 +23,18 @@ This code example demonstrates the use of the Class-B Safety Test Library to tes
 
 - [PSoC&trade; 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439) (`CY8CPROTO-062S2-43439`) – Default value of `TARGET`
 - [PSoC&trade; 6 Wi-Fi Bluetooth&reg; Prototyping Kit](https://www.infineon.com/CY8CPROTO-062-4343W) (`CY8CPROTO-062-4343W`)
+- [PSoC&trade; 6 Wi-Fi Bluetooth&reg; Pioneer Kit](https://www.infineon.com/CY8CKIT-062-WIFI-BT) (`CY8CKIT-062-WIFI-BT`)
+- [PSoC&trade; 6 Bluetooth&reg; LE Pioneer Kit](https://www.infineon.com/CY8CKIT-062-BLE) (`CY8CKIT-062-BLE`)
+- [PSoC&trade; 6 Bluetooth&reg; LE Prototyping Kit](https://www.infineon.com/CY8CPROTO-063-BLE) (`CY8CPROTO-063-BLE`)
 - [PSoC&trade; 62S2 Wi-Fi Bluetooth&reg; Pioneer Kit](https://www.infineon.com/CY8CKIT-062S2-43012) (`CY8CKIT-062S2-43012`)
+- [PSoC&trade; 62S1 Wi-Fi Bluetooth&reg; Pioneer Kit](https://www.infineon.com/CYW9P62S1-43438EVB-01) (`CYW9P62S1-43438EVB-01`)
+- [PSoC&trade; 62S1 Wi-Fi Bluetooth&reg; Pioneer Kit](https://www.infineon.com/CYW9P62S1-43012EVB-01) (`CYW9P62S1-43012EVB-01`)
 - [PSoC&trade; 64 "Secure Boot" Wi-Fi Bluetooth&reg; Pioneer Kit](https://www.infineon.com/CY8CKIT-064B0S2-4343W) (`CY8CKIT-064B0S2-4343W`)
+- [PSoC&trade; 62S4 Pioneer Kit](https://www.infineon.com/CY8CKIT-062S4) (`CY8CKIT-062S4`)
 - [PSoC&trade; 62S2 Evaluation Kit](https://www.infineon.com/CY8CEVAL-062S2) (`CY8CEVAL-062S2`, `CY8CEVAL-062S2-LAI-4373M2`, `CY8CEVAL-062S2-MUR-43439M2`, `CY8CEVAL-062S2-LAI-43439M2`, `CY8CEVAL-062S2-MUR-4373EM2`, `CY8CEVAL-062S2-MUR-4373M2`,`CY8CEVAL-062S2-CYW43022CUB`)
 - [XMC7200 Evaluation Kit](https://www.infineon.com/KIT_XMC72_EVK) (`KIT_XMC72_EVK`, `KIT_XMC72_EVK_MUR_43439M2`)
 - [PSoC&trade; 62S3 Wi-Fi Bluetooth&reg; Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S3-4343W) (`CY8CPROTO-062S3-4343W`)
+- [XMC7100 Evaluation Kit](https://www.infineon.com/KIT_XMC71_EVK_LITE_V1) (`KIT_XMC71_EVK_LITE_V1`)
 
 ## Hardware setup
 
@@ -42,6 +49,7 @@ BSP  |  TX-RX |  RX-TX
 ---- | ------ | ------ 
 CY8CPROTO-062-4343W | P12_1 to P5_4 | P12_0 to P5_5
 CY8CPROTO-062S2-43439 | P12_1 to P5_4 | P12_0 to P5_5
+CY8CPROTO-063-BLE | P6_5 to P10_0 | P6_4 to P10_1
 CY8CKIT-062S2-43012 | P12_1 to P5_4 | P12_0 to P5_5
 CY8CKIT-064B0S2-4343W | P12_1 to P5_4 | P12_0 to P5_5
 CY8CPROTO-062S3-4343W | P8_1 to P5_0 | P8_0 to P5_1
@@ -52,6 +60,13 @@ CY8CEVAL-062S2-LAI-43439M2 | P12_1 to P5_4 | P12_0 to P5_5
 CY8CEVAL-062S2-MUR-4373EM2 | P12_1 to P5_4 | P12_0 to P5_5
 CY8CEVAL-062S2-MUR-4373M2 | P12_1 to P5_4 | P12_0 to P5_5
 CY8CEVAL-062S2-CYW43022CUB | P12_1 to P5_4 | P12_0 to P5_5
+CY8CKIT-062-BLE | P10_1 to P9_0 | P10_0 to P9_1
+CY8CKIT-062S2-43012 | P12_1 to P5_4 | P12_0 to P5_5
+CY8CKIT-062S4 | P2_1 to P0_2 | P2_0 to P0_3
+CY8CKIT-062-WIFI-BT | P10_1 to P9_0 | P10_0 to P9_1
+CYW9P62S1-43012EVB-01 | P10_1 to P0_2 | P10_0 to P0_3
+CYW9P62S1-43438EVB-01 | P9_1 to P10_0 | P9_0 to P10_1
+KIT_XMC71_EVK_LITE_V1 | P0_1 to P14_0 | P0_0 to P14_1
 KIT_XMC72_EVK| P14_0 to P10_1 | P10_0 to P14_1 
 KIT_XMC72_EVK_MUR_43439M2| P14_0 to P10_1 | P10_0 to P14_1
 
@@ -145,24 +160,6 @@ For more details, see the [Eclipse IDE for ModusToolbox&trade; user guide](https
 Launch VS Code manually, and then open the generated *{project-name}.code-workspace* file located in the project directory.
 
 For more details, see the [Visual Studio Code for ModusToolbox&trade; user guide](https://www.infineon.com/MTBVSCodeUserGuide) (locally available at *{ModusToolbox&trade; install directory}/docs_{version}/mt_vscode_user_guide.pdf*).
-
-</details>
-
-
-<details><summary><b>Keil µVision</b></summary>
-
-Double-click the generated *{project-name}.cprj* file to launch the Keil µVision IDE.
-
-For more details, see the [Keil µVision for ModusToolbox&trade; user guide](https://www.infineon.com/MTBuVisionUserGuide) (locally available at *{ModusToolbox&trade; install directory}/docs_{version}/mt_uvision_user_guide.pdf*).
-
-</details>
-
-
-<details><summary><b>IAR Embedded Workbench</b></summary>
-
-Open IAR Embedded Workbench manually, and create a new project. Then select the generated *{project-name}.ipcf* file located in the project directory.
-
-For more details, see the [IAR Embedded Workbench for ModusToolbox&trade; user guide](https://www.infineon.com/MTBIARUserGuide) (locally available at *{ModusToolbox&trade; install directory}/docs_{version}/mt_iar_user_guide.pdf*).
 
 </details>
 
@@ -315,7 +312,8 @@ Document title: *CE239682* - *Class-B Safety Test: Communication protocol*
 
 Version | Description of change 
 ------- | --------------------- 
-1.0.0   | New code example      
+1.0.0   | New code example  
+1.1.0   | Added support for PSoC6 1M, PSoC 256K and XMC 7100 kit   
 
 <br>
 
