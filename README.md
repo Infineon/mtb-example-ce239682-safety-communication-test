@@ -4,12 +4,12 @@ This code example demonstrates the use of the Class-B Safety Test Library to tes
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-ce239682-safety-communication-test)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzk2ODIiLCJTcGVjIE51bWJlciI6IjAwMi0zOTY4MiIsIkRvYyBUaXRsZSI6IkNsYXNzLUIgU2FmZXR5IFRlc3Q6IENvbW11bmljYXRpb24gcHJvdG9jb2wiLCJyaWQiOiJzZGFrIiwiRG9jIHZlcnNpb24iOiIxLjEuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzk2ODIiLCJTcGVjIE51bWJlciI6IjAwMi0zOTY4MiIsIkRvYyBUaXRsZSI6IkNsYXNzLUIgU2FmZXR5IFRlc3Q6IENvbW11bmljYXRpb24gcHJvdG9jb2wiLCJyaWQiOiJzZGFrIiwiRG9jIHZlcnNpb24iOiIxLjIuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.2 or later (tested with v3.2)
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.3 or later (tested with v3.3)
 - Board support package (BSP) minimum required version: v4.2.0
 - Programming language: C
 - Associated parts: [PSoC&trade; 6 MCU](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-6-32-bit-arm-cortex-m4-mcu), [XMC7000 MCU](https://www.infineon.com/cms/en/product/microcontroller/32-bit-industrial-microcontroller-based-on-arm-cortex-m)
@@ -18,6 +18,8 @@ This code example demonstrates the use of the Class-B Safety Test Library to tes
 ## Supported toolchains (make variable 'TOOLCHAIN')
 
 - GNU Arm&reg; Embedded Compiler v11.3.1 (`GCC_ARM`) – Default value of `TOOLCHAIN`
+- Arm® Compiler v6.22 (`ARM`)
+- IAR C/C++ Compiler v9.50.2 (`IAR`)
 
 ## Supported kits (make variable 'TARGET')
 
@@ -314,7 +316,7 @@ Version | Description of change
 ------- | --------------------- 
 1.0.0   | New code example  
 1.1.0   | Added support for PSoC6 1M, PSoC 256K and XMC 7100 kit   
-
+1.2.0   | Added support IAR and ARM compiler
 <br>
 
 All referenced product or service names and trademarks are the property of their respective owners.

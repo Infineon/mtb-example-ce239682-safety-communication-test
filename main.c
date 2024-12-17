@@ -291,8 +291,6 @@ static void Timeout_Counter_Init(void)
     NVIC_EnableIRQ((IRQn_Type) NvicMux5_IRQn);
 #endif
 
-    NVIC_EnableIRQ(intrCfg.intrSrc);
-
     /* Init and Enable timer */
     tcpwm_result = Cy_TCPWM_Counter_Init(CYBSP_TIMER_UART_MASTER_HW, CYBSP_TIMER_UART_MASTER_NUM, &CYBSP_TIMER_UART_MASTER_config);
     if(tcpwm_result != CY_TCPWM_SUCCESS)
